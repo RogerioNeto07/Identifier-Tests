@@ -1,0 +1,13 @@
+# Ignorar ambiente virtual
+venv/
+
+# Ignorar arquivos Python compilados
+__pycache__/
+*.py[cod]
+
+# Cache do pytest
+.pytest_cache/
+
+# Arquivos do sistema Windows
+Thumbs.db
+.DS_Store
