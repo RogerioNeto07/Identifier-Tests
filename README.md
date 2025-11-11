@@ -86,6 +86,6 @@ Valores de teste: "abc" (inicia com letra); "1abc" (inicia com número)
 
 Todos os testes foram executados com sucesso no GitHub Actions.
 
-![Status do Workflow](https://github.com/<seu-usuario>/<seu-repositorio>/actions/workflows/python-tests.yml/badge.svg)
+![Status do Workflow](https://github.com/<RogerioNeto07>/<Identifier-Tests>/actions/workflows/python-tests.yml/badge.svg)
 
 
