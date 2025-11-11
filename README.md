@@ -82,4 +82,10 @@ Valores de teste: "abc" (inicia com letra); "1abc" (inicia com número)
 - Entradas com caracteres inválidos, comprimento fora dos limites e números iniciais resultaram corretamente em falha.
 - Entradas que seguem as regras (letra inicial, 1–6 caracteres, letras e dígitos) foram validadas com sucesso.
 
+## Execução no GitHub Actions
+
+Todos os testes foram executados com sucesso no GitHub Actions.
+
+![Status do Workflow](https://github.com/<seu-usuario>/<seu-repositorio>/actions/workflows/python-tests.yml/badge.svg)
+
 
