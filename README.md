@@ -82,7 +82,40 @@ Valores de teste: "abc" (inicia com letra); "1abc" (inicia com número)
 - Entradas com caracteres inválidos, comprimento fora dos limites e números iniciais resultaram corretamente em falha.
 - Entradas que seguem as regras (letra inicial, 1–6 caracteres, letras e dígitos) foram validadas com sucesso.
 
+## Teste Estrutural (White-box)
+
+Foram projetados casos de teste considerando o fluxo interno do método `validate_identifier`,
+buscando atingir a maior cobertura possível dos ramos, decisões e condições internas.
+
+### Casos de Teste Estruturais
+
+| ID    | Entrada                 | Objetivo técnico (fluxo interno)                        | Resultado Esperado |
+|-------|--------------------------|-----------------------------------------------------------|----------------------|
+| TB01  | `""`                     | Testar condição inicial `len(s) == 0`                    | False |
+| TB02  | `"1abc"`                 | Testar falha por iniciar com número                      | False |
+| TB03  | `"a"`                    | Menor identificador válido (sem loop de caracteres)      | True |
+| TB04  | `"abc"`                  | Loop simples com somente letras                           | True |
+| TB05  | `"a1b2C3"`               | Loop múltiplo com letras e dígitos                       | True |
+| TB06  | `"ab_c"`                 | Testar rejeição de caractere inválido (`_`)              | False |
+| TB07  | `"abcdefg"`              | Testar falha por comprimento > 6                         | False |
+| TB08  | `"a1b2"`                 | Combinação equilibrada de letra + dígito                 | True |
+| TB09  | `"A"`                    | Testar letra maiúscula no início                         | True |
+
+---
+
+### Relatório de Cobertura
+
+Gerado com o Coverage:
+
+```bash
+coverage run -m pytest
+coverage report -m
+coverage html
+```
+<img width="606" height="282" alt="Identifier Coverage" src="https://github.com/user-attachments/assets/351b53fd-e790-41c5-b7bc-60a6c70af081" />
+
 ## Execução no GitHub Actions
+
 
 Todos os testes foram executados com sucesso no GitHub Actions.
 
